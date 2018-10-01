@@ -54,11 +54,13 @@ public class ScheduleCalendar
     {
         String output = "";
         output += name + "\n";
-
+        int dayCount = 0;
         for (Slot s : slots)
         {
+            output += "Day " + (dayCount / 2) + ": ";
             output += s.toString();
             output += "\n";
+            dayCount++;
         }
 
         return output;
@@ -104,7 +106,9 @@ public class ScheduleCalendar
 
         public String toString()
         {
+            
             String output = "";
+            
             for (int i = 0; i < numOfGuards; i++)
             {
                 if (i < guards.size())
@@ -121,3 +125,4 @@ public class ScheduleCalendar
     }
 
 }
+
